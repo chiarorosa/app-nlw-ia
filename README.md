@@ -17,5 +17,6 @@ pnpm create vite ...
 
 <hr>
 
-Licença
-Esse projeto está sob a licença MIT.
+## Licença
+
+Esse projeto está sob a licença MIT. Para mais detalhes leia [licença](https://raw.githubusercontent.com/chiarorosa/app-nlw-ia/main/LICENSE)
