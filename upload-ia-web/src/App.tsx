@@ -79,6 +79,14 @@ export function App() {
 							</Select>
 							<span className="block text-xs text-muted-foreground italic">Se você assinar o plano pago da open.ai você pode customizar essa opção</span>
 						</div>
+
+						<Separator />
+
+						<div className="space-y-2">
+							<Label>Temperatura</Label>
+
+							<span className="block text-xs text-muted-foreground italic">Valores mais altos tendem a deixar o resultado mais criativo e com possíveis erros</span>
+						</div>
 					</form>
 				</aside>
 			</main>
