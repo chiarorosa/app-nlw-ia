@@ -1,3 +1,4 @@
+import { Github } from "lucide-react"
 import { Button } from "./components/ui/button"
 
 export function App() {
@@ -10,7 +11,10 @@ export function App() {
 					<span className="text-sm text-muted-foreground">
 						Desenvolvido no NLW-ia 🤖 2023
 					</span>
-					<Button variant="outline">Github</Button>
+					<Button variant="outline">
+						<Github className="w-4 h-4 mr-2" />
+						Github
+					</Button>
 				</div>
 			</div>
 		</div>
