@@ -1,4 +1,4 @@
-import { Github } from "lucide-react"
+import { Github, FileVideo } from "lucide-react"
 import { Button } from "./components/ui/button"
 import { Separator } from "./components/ui/separator"
 import { Textarea } from "./components/ui/textarea"
@@ -26,6 +26,7 @@ export function App() {
 				{/* flex-col = coluna (vertical) e flex-1 é espaço disponível subtraindo o aside*/}
 				<div className="flex flex-col flex-1 gap-4">
 					<div className="grid grid-rows-2 gap-4 flex-1">
+						{/* Componente react Textarea */}
 						<Textarea className="resize-none p-4 leading-relaxed" placeholder="Insira o prompt para a IA..." />
 						<Textarea className="resize-none p-4 leading-relaxed" placeholder="Resultado gerado pela IA..." readOnly />
 					</div>
@@ -33,7 +34,25 @@ export function App() {
 						Lembre-se: você pode utilizar a variável <code className="text-blue-400">{"{transcription}"}</code> no seu prompt para adicionaro contéudo da transcrição do vídeo carregado.
 					</p>
 				</div>
-				<aside className="w-80"></aside>
+
+				<aside className="w-80 space-y-6">
+					<form className="space-y-6">
+						{/* aspect-ratio 16:9 */}
+						<label
+							htmlFor="video"
+							className="border flex rounded-md aspect-video cursor-pointer border-dashed text-sm flex-col gap-4 items-center justify-center text-muted-foreground hover:bg-primary/5"
+						>
+							<FileVideo className="w-5 h-5" />
+							Selecione o vídeo
+						</label>
+						{/* sr-only = screen reader faz com que o elemento seja lido apenas pelo leitor de tela */}
+						<input type="file" id="video" accept="video/mp4" className="sr-only" />
+
+						<Separator />
+
+						<div className="space-y-1"></div>
+					</form>
+				</aside>
 			</main>
 		</div>
 	)
