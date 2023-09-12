@@ -68,6 +68,20 @@ export function App() {
 
 					<form className="space-y-6">
 						<div className="space-y-2">
+							<Label>Prompt</Label>
+							{/* https://ui.shadcn.com/docs/components/select */}
+							<Select>
+								<SelectTrigger>
+									<SelectValue placeholder="Selecione um prompt..." />
+								</SelectTrigger>
+								<SelectContent>
+									<SelectItem value="title">Título do Vídeo</SelectItem>
+									<SelectItem value="description">Descrição do Vídeo</SelectItem>
+								</SelectContent>
+							</Select>
+						</div>
+
+						<div className="space-y-2">
 							<Label>Modelo</Label>
 							{/* https://ui.shadcn.com/docs/components/select */}
 							<Select disabled defaultValue="gpt3.5">
