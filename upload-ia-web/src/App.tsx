@@ -1,4 +1,4 @@
-import { Github, FileVideo } from "lucide-react"
+import { Github, FileVideo, Upload } from "lucide-react"
 import { Button } from "./components/ui/button"
 import { Separator } from "./components/ui/separator"
 import { Textarea } from "./components/ui/textarea"
@@ -55,6 +55,11 @@ export function App() {
 							<Label htmlFor="transcription_prompt">Prompt de transcrição</Label>
 							<Textarea id="transcription_prompt" className="min-h-20 leading-relaxed" placeholder="Insira palavras-chave mencionadas no vídeo, separadas por vírgula (,)" />
 						</div>
+
+						<Button type="submit" className="w-full">
+							Carregar vídeo
+							<Upload className="w-5 h-5 ml-2" />
+						</Button>
 					</form>
 				</aside>
 			</main>
