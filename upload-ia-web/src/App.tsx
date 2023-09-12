@@ -2,6 +2,7 @@ import { Github, FileVideo } from "lucide-react"
 import { Button } from "./components/ui/button"
 import { Separator } from "./components/ui/separator"
 import { Textarea } from "./components/ui/textarea"
+import { Label } from "./components/ui/label"
 
 export function App() {
 	return (
@@ -50,7 +51,10 @@ export function App() {
 
 						<Separator />
 
-						<div className="space-y-1"></div>
+						<div className="space-y-1">
+							<Label htmlFor="transcription_prompt">Prompt de transcrição</Label>
+							<Textarea id="transcription_prompt" className="min-h-20 leading-relaxed" placeholder="Insira palavras-chave mencionadas no vídeo, separadas por vírgula (,)" />
+						</div>
 					</form>
 				</aside>
 			</main>
