@@ -4,6 +4,7 @@ import { Separator } from "./components/ui/separator"
 import { Textarea } from "./components/ui/textarea"
 import { Label } from "./components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./components/ui/select"
+import { Slider } from "./components/ui/slider"
 
 export function App() {
 	return (
@@ -84,9 +85,12 @@ export function App() {
 
 						<div className="space-y-2">
 							<Label>Temperatura</Label>
-
-							<span className="block text-xs text-muted-foreground italic">Valores mais altos tendem a deixar o resultado mais criativo e com possíveis erros</span>
+							{/* https://ui.shadcn.com/docs/components/slider */}
+							<Slider min={0} max={1} step={0.1} />
+							<span className="block text-xs text-muted-foreground italic leading-relaxed">Valores mais altos tendem a deixar o resultado mais criativo e com possíveis erros</span>
 						</div>
+
+						<Separator />
 					</form>
 				</aside>
 			</main>
