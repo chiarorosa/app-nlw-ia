@@ -1,4 +1,4 @@
-import { Github, FileVideo, Upload } from "lucide-react"
+import { Github, FileVideo, Upload, Wand2 } from "lucide-react"
 import { Button } from "./components/ui/button"
 import { Separator } from "./components/ui/separator"
 import { Textarea } from "./components/ui/textarea"
@@ -91,6 +91,11 @@ export function App() {
 						</div>
 
 						<Separator />
+
+						<Button type="submit" className="w-full">
+							Executar
+							<Wand2 className="w-5 h-5 ml-2" />
+						</Button>
 					</form>
 				</aside>
 			</main>
