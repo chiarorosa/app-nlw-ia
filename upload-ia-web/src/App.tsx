@@ -4,7 +4,7 @@ import { Separator } from "./components/ui/separator"
 
 export function App() {
 	return (
-		<div>
+		<div className="min-h-screen flex flex-col">
 			<div className="px-6 py-3 flex items-center justify-between border-b">
 				<h1 className="text-xl font-bold">upload.ai</h1>
 
