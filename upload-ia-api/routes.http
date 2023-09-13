@@ -1,2 +1,5 @@
-# @name get-started 
-GET http://127.0.0.1:3333
+# @name list-prompts
+GET http://127.0.0.1:3333/prompts
+
+###
+
