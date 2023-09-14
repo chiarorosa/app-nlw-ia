@@ -24,6 +24,7 @@ pnpm create vite ...
 - Typescript + @types/node + tsx ✅
 - PrismaORM [prisma](https://www.prisma.io/) ✅
 - Fastify [fastify](https://fastify.dev/) ✅
+- @fastify/multipart
 
 <hr>
 
