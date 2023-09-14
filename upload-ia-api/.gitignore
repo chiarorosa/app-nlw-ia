@@ -3,3 +3,5 @@ node_modules
 .env
 # Ignorar sqlite db
 dev.db
+# Ignorar arquivos mac
+.DS_Store
