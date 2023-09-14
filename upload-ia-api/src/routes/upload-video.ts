@@ -18,8 +18,6 @@ export async function uploadVideoRoute(app: FastifyInstance) {
 	app.post("/videos", async (request, reply) => {
 		const data = await request.file()
 
-		console.log(request)
-
 		if (!data) {
 			return reply.status(400).send({ error: "Nenhum arquivo enviado." })
 		}
