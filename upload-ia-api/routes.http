@@ -13,3 +13,13 @@ Content-Type: audio/mpeg
 
 < ./sample.mp3
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+###
+
+# @name create-transcription
+POST http://127.0.0.1:3333/videos/f8615a20-d4a8-4c2d-b489-35a1e351d173/transcription
+Content-Type: application/json
+
+{
+    "prompt": "teste"
+}
