@@ -1,4 +1,5 @@
 import { FastifyInstance } from "fastify"
+import { createReadStream } from "node:fs"
 import { z } from "zod" // zod é um validador de esquemas de dados
 import { prisma } from "../lib/prisma"
 
@@ -17,9 +18,21 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
 
 		const { prompt } = bodySchema.parse(request.body)
 
+		const video = await prisma.video.findUniqueOrThrow({
+			where: {
+				id: videoId,
+			},
+		})
+
+		const videoPath = video.path
+		const audioReadStream = createReadStream(videoPath)
+
+		// TODO: Implementar a transcrição do áudio usando api da openai
+
 		return {
 			videoId,
 			prompt,
+			videoPath,
 		}
 	})
 }
