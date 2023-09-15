@@ -2,6 +2,7 @@ import { FastifyInstance } from "fastify"
 import { createReadStream } from "node:fs"
 import { z } from "zod" // zod é um validador de esquemas de dados
 import { prisma } from "../lib/prisma"
+import { openai } from "../lib/openai"
 
 // O fastify exige todos módulos de rotas sejam assíncronos
 export async function createTranscriptionRoute(app: FastifyInstance) {
@@ -27,10 +28,15 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
 		const videoPath = video.path
 		const audioReadStream = createReadStream(videoPath)
 
-		return {
-			videoId,
+		const response = await openai.audio.transcriptions.create({
+			file: audioReadStream,
+			model: "whisper-1", // modelo de ML
+			language: "pt", // idioma majoritário do áudio
+			response_format: "json",
+			temperature: 0, // quanto mais próximo de 0, mais conservador
 			prompt,
-			videoPath,
-		}
+		})
+
+		return response.text
 	})
 }

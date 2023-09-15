@@ -25,6 +25,9 @@ devDependencies:
   '@types/node':
     specifier: ^20.6.0
     version: 20.6.0
+  dotenv:
+    specifier: ^16.3.1
+    version: 16.3.1
   prisma:
     specifier: ^5.3.0
     version: 5.3.0
@@ -535,6 +538,11 @@ packages:
       base-64: 0.1.0
       md5: 2.3.0
     dev: false
+
+  /dotenv@16.3.1:
+    resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
+    engines: {node: '>=12'}
+    dev: true
 
   /end-of-stream@1.4.4:
     resolution: {integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==}
