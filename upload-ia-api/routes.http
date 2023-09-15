@@ -23,3 +23,15 @@ Content-Type: application/json
 {
     "prompt": "typescript, api"
 }
+
+###
+
+# @name generate-ai-completion
+POST http://127.0.0.1:3333/ai/complete
+Content-Type: application/json
+
+{
+    "videoId": "a4153f21-46d5-4da6-a67a-f718fc61e97e",
+    "temperature": 0.5,
+    "template": "Gere um resumo da transcrição do vídeo: '''{transcription}'''"
+}
