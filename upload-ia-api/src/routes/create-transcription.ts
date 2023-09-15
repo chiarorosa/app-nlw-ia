@@ -27,8 +27,6 @@ export async function createTranscriptionRoute(app: FastifyInstance) {
 		const videoPath = video.path
 		const audioReadStream = createReadStream(videoPath)
 
-		// TODO: Implementar a transcrição do áudio usando api da openai
-
 		return {
 			videoId,
 			prompt,
