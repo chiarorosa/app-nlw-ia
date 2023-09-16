@@ -25,7 +25,9 @@ pnpm create vite ...
 - PrismaORM [prisma](https://www.prisma.io/) ✅
 - Fastify [fastify](https://fastify.dev/) ✅
 - @fastify/multipart ✅
-- Zod [zod](https://zod.dev/)
+- Zod [zod](https://zod.dev/) ✅
+- @fastify/CORS ✅
+- OpenAI API [openai](https://github.com/openai/openai-node) ✅
 
 <hr>
 
