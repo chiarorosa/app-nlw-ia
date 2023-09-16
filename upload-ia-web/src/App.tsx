@@ -1,10 +1,11 @@
-import { Github, FileVideo, Upload, Wand2 } from "lucide-react"
+import { Github, Wand2 } from "lucide-react"
 import { Button } from "./components/ui/button"
 import { Separator } from "./components/ui/separator"
 import { Textarea } from "./components/ui/textarea"
 import { Label } from "./components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./components/ui/select"
 import { Slider } from "./components/ui/slider"
+import { VideoInputForm } from "./components/video-input-form"
 
 export function App() {
 	return (
@@ -39,30 +40,7 @@ export function App() {
 				</div>
 
 				<aside className="w-80 space-y-6">
-					<form className="space-y-6">
-						{/* aspect-ratio 16:9 */}
-						<label
-							htmlFor="video"
-							className="border flex rounded-md aspect-video cursor-pointer border-dashed text-sm flex-col gap-4 items-center justify-center text-muted-foreground hover:bg-primary/5"
-						>
-							<FileVideo className="w-5 h-5" />
-							Selecione o vídeo
-						</label>
-						{/* sr-only = screen reader faz com que o elemento seja lido apenas pelo leitor de tela */}
-						<input type="file" id="video" accept="video/mp4" className="sr-only" />
-
-						<Separator />
-
-						<div className="space-y-2">
-							<Label htmlFor="transcription_prompt">Prompt de transcrição</Label>
-							<Textarea id="transcription_prompt" className="h-20 leading-relaxed resize-none" placeholder="Insira palavras-chave mencionadas no vídeo, separadas por vírgula (,)" />
-						</div>
-
-						<Button type="submit" className="w-full">
-							Carregar vídeo
-							<Upload className="w-5 h-5 ml-2" />
-						</Button>
-					</form>
+					<VideoInputForm />
 
 					<Separator />
 
